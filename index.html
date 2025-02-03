@@ -1,11 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Influencer Gear</title>
+    <!-- tailwind cdn -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- remixicon cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Font link  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap" rel="stylesheet">
+
+    <!-- style  -->
+    <style>
+        body {
+            font-family: "Roboto", serif;
+            color: #3A3A3A;
+        }
+
+        .section-padding{
+            padding: 60px 0;
+        }
+
+        .background-primary{
+            background-color: #E02C6D;
+        }
+    </style>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+
 </head>
+
 <body>
-    
+    <header class="container flex items-center justify-between mx-auto py-6 px-5 md:px-0">
+        <div class="logo flex items-center">
+            <p class="font-bold text-2xl hidden md:block">Influencer Products</p>
+            <i class="ri-menu-line font-bold text-2xl md:hidden"></i>
+        </div>
+        <nav>
+            <ul class="flex items-center gap-7">
+                <li><a class="font-bold hidden md:block" href="#">Home</a></li>
+                <li><a class="font-bold hidden md:block" href="#">Products</a></li>
+                <li><a class="font-bold hidden md:block" href="#">Sign Up</a></li>
+                <li><a class="font-bold hidden md:block" href="#">Log In</a></li>
+                <li><a class="font-bold hidden md:block text-2xl" href="#"><i class="ri-search-line"></i></a></li>
+                <li><a class="font-bold text-2xl" href="#"><i class="ri-shopping-cart-2-line"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-5 md:px-0 ">
+        <!-- banner section  -->
+         <section class="flex flex-col-reverse md:flex-row items-center justify-between section-padding">
+            <div class="text-center md:text-start mt-5 md:mt-5">
+                <h1 class="text-3xl md:text-6xl font-bold">Start your Journey as 
+                    Influencer</h1>
+                    <p class="my-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sem <br> vestibulum sed scelerisque eros. Lectus faucibus.</p>
+                    <button class="px-5 py-3 rounded-full bg text-white background-primary">Preebook now <span><i class="ri-arrow-right-line"></i></span></button>
+            </div>
+            <div class="relative">
+                <img src="./images/Circle design.svg" alt="">
+                <img class="absolute top-8" src="./images/main-camera.png" alt="">
+            </div>
+         </section>
+    </main>
 </body>
+
 </html>
